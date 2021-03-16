@@ -5,6 +5,8 @@ const MOVIE_DATA = [
     releaseYear: 1994,
     description:
       "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
+    longdescription:
+      "Commodo nulla voluptate veniam consectetur ad. Officia excepteur aute sint tempor do nisi id pariatur officia. Nulla ut sunt qui mollit ex ex dolor ea commodo ex sit. Magna nostrud magna nostrud minim sit et sint ipsum commodo non pariatur. Id adipisicing duis enim velit occaecat. Minim quis voluptate occaecat amet.",
     rating: 4.8,
     genre: "drama",
     image:
@@ -19,6 +21,8 @@ const MOVIE_DATA = [
     description:
       "When the menace known as The Joker emerges from his mysterious past, he wreaks havoc and chaos on the people of Gotham. The Dark Knight must accept one of the greatest psychological and physical tests of his ability to fight injustice.",
     rating: 4.7,
+    longdescription:
+      "Commodo nulla voluptate veniam consectetur ad. Officia excepteur aute sint tempor do nisi id pariatur officia. Nulla ut sunt qui mollit ex ex dolor ea commodo ex sit. Magna nostrud magna nostrud minim sit et sint ipsum commodo non pariatur. Id adipisicing duis enim velit occaecat. Minim quis voluptate occaecat amet.",
     genre: "action, crime, drama",
     image:
       "https://img.cinemablend.com/filter:scale/quill/c/3/8/0/f/4/c380f4f12cfeec19f0c40c6f57db188f2f98cca8.jpg?mw=600",
@@ -29,6 +33,8 @@ const MOVIE_DATA = [
     id: "3",
     name: "Lord of the Rings",
     releaseYear: 2004,
+    longdescription:
+      "Commodo nulla voluptate veniam consectetur ad. Officia excepteur aute sint tempor do nisi id pariatur officia. Nulla ut sunt qui mollit ex ex dolor ea commodo ex sit. Magna nostrud magna nostrud minim sit et sint ipsum commodo non pariatur. Id adipisicing duis enim velit occaecat. Minim quis voluptate occaecat amet.",
     description:
       "A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron.",
     rating: 4.9,
@@ -58,6 +64,19 @@ export const getCategories = () => {
 
 export const getMovies = () => {
   return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(MOVIE_DATA);
+      // reject("cannot fetch the data!");
+    }, 50);
+  });
+};
+
+export const createMovie = (movie) => {
+  return new Promise((resolve, reject) => {
+    //create id for movie
+
+    movie.id = Math.random().toString(36).substr(2, 7);
+    MOVIE_DATA.push(movie);
     setTimeout(() => {
       resolve(MOVIE_DATA);
       // reject("cannot fetch the data!");
