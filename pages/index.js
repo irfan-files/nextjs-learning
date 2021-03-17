@@ -141,9 +141,9 @@
 // export default Home;
 
 import React, { useState, useEffect } from "react";
-import SideMenu from "../components/sideMenu";
+import SideMenu from "../components/sidemenu";
 import Carousel from "../components/carousel";
-import MovieList from "../components/movieList";
+import MovieList from "../components/movielist";
 import { getMovies, getCategories, movies } from "../actions";
 
 const Home = (props) => {
