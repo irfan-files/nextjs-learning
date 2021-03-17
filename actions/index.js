@@ -40,12 +40,9 @@ export const createMovie = (movie) => {
 };
 
 export const getMovieById = (id) => {
-  return new Promise((resolve) => {
-    const movieIndex = MOVIE_DATA.findIndex((movie) => {
-      return movie.id === id;
-    });
-    const movie = MOVIE_DATA[movieIndex];
+  return axios.get(`${BASE_URL}/api/v1/movies/${id}`).then((res) => res.data);
 
+  return new Promise((resolve) => {
     setTimeout(() => resolve(movie), 50);
   });
 };
