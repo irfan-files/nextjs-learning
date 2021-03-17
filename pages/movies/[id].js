@@ -8,12 +8,16 @@ const Movie = (props) => {
 
   return (
     <div className="container">
-      <div class="jumbotron">
-        <h1 class="display-4">{movie.name}</h1>
-        <img src={movie.image} class="img-fluid" alt="Responsive image"></img>
-        <hr class="my-4" />
+      <div className="jumbotron">
+        <h1 className="display-4">{movie.name}</h1>
+        <img
+          src={movie.image}
+          className="img-fluid"
+          alt="Responsive image"
+        ></img>
+        <hr className="my-4" />
         <p>{movie.description}</p>
-        <a class="btn btn-primary btn-lg" href="#" role="button">
+        <a className="btn btn-primary btn-lg" href="#" role="button">
           Learn more
         </a>
       </div>
