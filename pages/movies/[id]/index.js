@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import { getMovieById, deleteMovie } from "../../actions";
+import { getMovieById, deleteMovie } from "../../../actions";
 
 const Movie = (props) => {
   const router = useRouter();
@@ -28,11 +28,11 @@ const Movie = (props) => {
         </a>
         <a
           onClick={() => handleDeleteMovie(id)}
-          className="btn btn-primary btn-lg mr-1"
+          className="btn btn-danger btn-lg mr-1"
           href="#"
           role="button"
         >
-          Learn more
+          Delete
         </a>
       </div>
     </div>
