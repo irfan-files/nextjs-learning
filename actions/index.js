@@ -33,8 +33,10 @@ export const createMovie = (movie) => {
 
 export const getMovieById = (id) => {
   return axios.get(`${BASE_URL}/api/v1/movies/${id}`).then((res) => res.data);
+};
 
-  return new Promise((resolve) => {
-    setTimeout(() => resolve(movie), 50);
-  });
+export const deleteMovie = (id) => {
+  return axios
+    .delete(`${BASE_URL}/api/v1/movies/${id}`)
+    .then((res) => res.data);
 };

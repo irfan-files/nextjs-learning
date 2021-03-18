@@ -41,38 +41,5 @@
     "genre": "action, crime, drama",
     "cover": "https://images.unsplash.com/photo-1497124401559-3e75ec2ed794?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80",
     "image": "https://img.cinemablend.com/filter:scale/quill/c/3/8/0/f/4/c380f4f12cfeec19f0c40c6f57db188f2f98cca8.jpg?mw=600"
-  },
-  {
-    "name": "dsda",
-    "description": "dsadasd",
-    "longdescription": "dsdsdsa",
-    "raing": "",
-    "cover": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NXx8bW92aWV8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-    "image": "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NHx8bW92aWV8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-    "rating": "2",
-    "genre": "drama,music,adventure,historical",
-    "id": "khsgf"
-  },
-  {
-    "name": "sdsda",
-    "description": "asdadasd",
-    "longdescription": "sdasdasdsda",
-    "raing": "",
-    "cover": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NXx8bW92aWV8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-    "image": "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NHx8bW92aWV8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-    "rating": "4",
-    "genre": "historical",
-    "id": "a6spy"
-  },
-  {
-    "name": "sdadsa",
-    "description": "dasdasd",
-    "longdescription": "dsadsadsadsaddasdad",
-    "raing": "",
-    "cover": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NXx8bW92aWV8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-    "image": "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NHx8bW92aWV8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-    "rating": "1",
-    "genre": "music,historical",
-    "id": "oacia"
   }
 ]
