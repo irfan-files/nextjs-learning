@@ -1,20 +1,32 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const MovieCreateform = (props) => {
-  const [form, setform] = useState({
+  const [isinitialDataLoaded, setIsInitialDataLoaded] = useState(false);
+  const defaultData = {
     name: "",
     description: "",
     longdescription: "",
     raing: "",
     cover: "",
     image: "",
-  });
+  };
+
+  const formData = props.initialData ? { ...props.initialData } : defaultData;
+
+  const [form, setForm] = useState(formData);
+
+  useEffect(() => {
+    if (props.initialData) {
+      setForm(props.initialData);
+      setIsInitialDataLoaded(true);
+    }
+  }, [isinitialDataLoaded]);
 
   const handleChange = (event) => {
     const target = event.target;
     const name = target.name;
 
-    setform({
+    setForm({
       ...form,
       [name]: target.value,
     });
@@ -31,13 +43,13 @@ const MovieCreateform = (props) => {
       }
     }
 
-    setform({
+    setForm({
       ...form,
       genre: value.toString(),
     });
   };
 
-  const submitform = () => {
+  const submitForm = () => {
     props.handleFormSubmit({ ...form });
   };
 
@@ -136,8 +148,8 @@ const MovieCreateform = (props) => {
         </select>
       </div>
 
-      <button onClick={submitform} className="btn btn-primary">
-        Create
+      <button onClick={submitForm} className="btn btn-primary">
+        {props.submitButton || "Create"}
       </button>
     </form>
   );

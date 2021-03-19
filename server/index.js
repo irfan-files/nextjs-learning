@@ -5,6 +5,7 @@ const bodyParser = require("body-parser");
 const dev = process.env.NODE_ENV !== "production";
 const app = next({ dev });
 const handle = app.getRequestHandler();
+
 const filePath = "./data.json";
 const fs = require("fs");
 const path = require("path");
@@ -58,6 +59,25 @@ app.prepare().then(() => {
     });
   });
 
+  server.patch("/api/v1/movies/:id", (req, res) => {
+    const { id } = req.params;
+    const movie = req.body;
+    const movieIndex = moviesData.findIndex((m) => m.id === id);
+
+    moviesData[movieIndex] = movie;
+
+    const pathToFile = path.join(__dirname, filePath);
+    const stringifiedData = JSON.stringify(moviesData, null, 2);
+
+    fs.writeFile(pathToFile, stringifiedData, (err) => {
+      if (err) {
+        return res.status(422).send(err);
+      }
+
+      return res.json(movie);
+    });
+  });
+
   // server.get('/faq', (req, res) => {
   //   res.send(`
   //     <html>
@@ -69,14 +89,19 @@ app.prepare().then(() => {
   // })
 
   // we are handling all of the request comming to our server
-  server.get("*", (req, res) => {
-    // next.js is handling requests and providing pages where we are navigating to
-    return handle(req, res);
-  });
+  // server.get('*', (req, res) => {
+  //   // next.js is handling requests and providing pages where we are navigating to
+  //   return handle(req, res)
+  // })
+
+  // server.post('*', (req, res) => {
+  //   // next.js is handling requests and providing pages where we are navigating to
+  //   return handle(req, res)
+  // })
 
   const PORT = process.env.PORT || 3000;
 
-  server.listen(PORT, (err) => {
+  server.use(handle).listen(PORT, (err) => {
     if (err) throw err;
     console.log("> Ready on port " + PORT);
   });
